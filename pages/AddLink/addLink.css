@@ -42,13 +42,19 @@ header {
   padding: 11px 27px;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  border: none;
 }
+
 .icon-profile {
   display: flex;
   padding: 11px 27px;
   align-items: center;
   gap: 8px;
   border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 .icon-preview {
   display: flex;
@@ -62,6 +68,9 @@ header {
 /* ///////////// main section////////*/
 section {
   padding: 16px;
+}
+.img-phone-mockup {
+  display: none;
 }
 .box {
   background-color: #fff;
@@ -111,6 +120,10 @@ p {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+}
+
+.btn:hover {
+  background: var(--light-purple, #efebff);
 }
 /*///////////////   Empty   /////////////////*/
 
@@ -206,6 +219,7 @@ form {
     font-style: normal;
     font-weight: 600;
     line-height: 150%; /* 24px */
+    cursor: pointer;
   }
   /* ///////////// main section////////*/
   section {
@@ -245,4 +259,19 @@ form {
   }
 }
 @media (min-width: 1440px) {
+  .img-phone-mockup {
+    display: block;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .phone-mockup {
+    padding: 118px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
 }
