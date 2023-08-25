@@ -23,6 +23,12 @@ header {
   background: var(--white, #fff);
   color: #633cff;
 }
+.logo-desk {
+  display: none;
+}
+.tab {
+  display: none;
+}
 .icon {
   display: flex;
   flex-direction: row;
