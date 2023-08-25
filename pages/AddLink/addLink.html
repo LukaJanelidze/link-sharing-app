@@ -9,36 +9,56 @@
   <body>
     <header>
       <img src="../../assets/images/logo-devlinks-small.svg" alt="" />
-      <img src="../../assets/images/icon-links-header.svg" alt="" />
-      <img src="../../assets/images/icon-profile-details-header.svg" alt="" />
+      <div class="icon">
+      <div class="icon-links">
+      <img  src="../../assets/images/icon-links-header.svg" alt="" />
+    </div>
+   
+    <div class="icon-profile">
+      <img   src="../../assets/images/icon-profile-details-header.svg" alt="" />
+    
+    </div>
+  </div>
+     <div class="icon-preview">
       <img src="../../assets/images/icon-preview-header.svg" alt="" />
+    </div>
     </header>
+
+
+
     <section>
-      <h1>Customize your links</h1>
+      <div class="box">
+      <main>
+        <div>
+      <h3>Customize your links</h3>
       <p>
         Add/edit/remove links below and then share all your profiles with the
         world!
       </p>
+    </div>
       <div>
-        <button>+ Add new link</button>
-      </section>
-      <section>
-        <img src="../../assets/images/illustration-empty.svg" alt="" />
-        <h1>Let’s get you started</h1>
-        <p>
+        <button class="btn">+ Add new link</button>
+      </div>
+    </main>
+
+
+    <div class="empty">
+      <div class="empty-box">
+        <img class="img-illustration" src="../../assets/images/illustration-empty.svg" alt="" />
+        <h3>Let’s get you started</h3>
+        <p class="info">
           Use the “Add new link” button to get started. Once you have more than
           one link, you can reorder and edit them. We’re here to help you share
           your profiles with everyone!
         </p>
       </div>
-    </section>
-
+      </div>
+   
+ <div>
     <form >
       <label >Platform</label>
-      
-      <select>
-      
-        <option value="gitHub"><img src="../../assets/images/icon-github.svg" alt="">GitHub</option>
+       <select>
+      <option value="gitHub"><img src="../../assets/images/icon-github.svg" alt="">GitHub</option>
         <option value="youtube"><img src="../../assets/images/icon-youtube.svg" alt="">YouTube</option>
         <option value="linkedIn"><img src="../../assets/images/icon-linkedin.svg" alt="">LinkedIn</option>
         <option value="dev.to"><img src="../../assets/images/icon-devto.svg" alt="">Dev.to</option>
@@ -46,12 +66,16 @@
         <option value="freecodecamp"><img src="../../assets/images/icon-freecodecamp.svg" alt="">freeCodeCamp</option>
       </select>
       <label>link<label>
+        <img src="../../assets/images/icon-links-header.svg" alt="" />
      <input type="text">
       </form>
-
-
-    <hr />
-      <button>Save</button>
-   
+    </div>
+    
+      <hr />
+      <div class="btn-btn">
+      <button class="btnSave">Save</button>
+    </div>
+    </div>
+    </section>
   </body>
 </html>
