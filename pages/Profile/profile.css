@@ -71,16 +71,21 @@ section {
   background-color: #fafafa;
   padding: 16px;
 }
+.img-phone-mockup {
+  display: none;
+}
 .main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 24px;
+
   background-color: #ffffff;
   border-radius: 12px;
   gap: 24px;
 }
-
+.box {
+  padding: 24px;
+}
 .profile {
   margin-top: 16px;
   display: flex;
@@ -250,14 +255,46 @@ input {
     flex-direction: row;
   }
   .btn-btn {
-    padding: 24px 40px 24px 40px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 0 40px 16px 16px;
   }
   .btnSave {
     width: 91px;
     height: 46px;
     right: 0;
+  }
+  .main {
+    width: 100%;
+  }
+  .box {
+    padding: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .img-phone-mockup {
+    display: block;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .phone-mockup {
+    padding: 118px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 40px 135px 40px;
+  }
+  .svg-text {
+    width: 190px;
   }
 }
