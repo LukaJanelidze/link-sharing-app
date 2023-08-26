@@ -33,14 +33,14 @@ body {
   height: 812px;
 }
 
-.login {
+.create-account {
   font-size: 24px;
   font-weight: 700;
   color: var(--dark-grey, #333);
   line-height: 36px;
 }
 
-.login-paragraph {
+.create-paragraph {
   color: var(--grey, #737373);
   font-size: 16px;
   font-weight: 400;
@@ -48,20 +48,28 @@ body {
   margin-top: 8px;
 }
 
-.email-section {
+.register-section {
   margin-top: 40px;
 }
 
 .email-text,
-.password-text {
+.create-password,
+.confirm-password {
   color: var(--dark-grey, #333);
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
 }
 
+.create-password,
+.confirm-password,
+.password-info {
+  margin-top: 24px;
+}
+
 .email-input,
-.password-input {
+.password-input,
+.confirm-input {
   border-radius: 8px;
   border: 1px solid var(--borders, #d9d9d9);
   background: var(--white, #fff);
@@ -72,10 +80,25 @@ body {
   margin-top: 4px;
   max-width: 311px;
   width: 100%;
+  outline: var(--purple, #633cff);
+  transition: color 0.3s;
 }
 
-.email-input[value],
-.password-input[value] {
+.email-input:hover {
+  border: 1px solid var(--purple, #633cff);
+}
+
+.password-input:hover {
+  border: 1px solid var(--purple, #633cff);
+}
+
+.confirm-input:hover {
+  border: 1px solid var(--purple, #633cff);
+}
+
+.email-input[placeholder],
+.password-input[placeholder],
+.confirm-input[placeholder] {
   color: var(--dark-grey, #333);
   font-size: 16px;
   font-weight: 400;
@@ -85,12 +108,14 @@ body {
 }
 
 .input-with-logo,
-.password-input-logo {
+.password-input-logo,
+.confirm-input-logo {
   position: relative;
 }
 
 .input-logo,
-.password-logo {
+.password-logo,
+.confirm-logo {
   position: absolute;
   top: 50%;
   left: 16px;
@@ -99,11 +124,14 @@ body {
   width: 16px;
 }
 
-.password-text {
-  margin-top: 24px;
+.password-info {
+  color: var(--grey, #737373);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
-.login-btn {
+.create-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +150,11 @@ body {
   margin-top: 24px;
 }
 
-.new-acc {
+.create-btn:hover {
+  background: var(--purple-hover-color, #beadff);
+}
+
+.have-acc {
   margin-top: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -130,12 +162,12 @@ body {
   text-align: center;
 }
 
-.ask-acc {
+.ask-have-acc {
   color: var(--grey, #737373);
   display: inline-block;
 }
 
-.create-acc {
+.login-acc {
   display: block;
   color: var(--purple, #633cff);
 }
@@ -150,28 +182,28 @@ body {
   .main {
     display: inline-block;
     width: 476px;
-    height: 482px;
+    height: 618px;
     padding: 40px;
   }
 
   .devlinks-img {
     position: relative;
-    top: -482px;
+    top: -618px;
     right: -310px;
+  }
+
+  .create-account {
+    font-size: 32px;
   }
 
   .email-input,
   .password-input,
-  .login-btn {
+  .confirm-input,
+  .create-btn {
     max-width: 396px;
   }
 
-  .login {
-    font-size: 32px;
-    line-height: 48px;
-  }
-
-  .new-acc {
+  .have-acc {
     margin-top: 24px;
     font-size: 16px;
     font-weight: 400;
@@ -179,12 +211,12 @@ body {
     text-align: center;
   }
 
-  .ask-acc {
+  .ask-have-acc {
     color: var(--grey, #737373);
     display: inline-block;
   }
 
-  .create-acc {
+  .login-acc {
     display: inline;
   }
 }
@@ -201,6 +233,6 @@ body {
 
   .devlinks-img {
     position: relative;
-    top: -266px;
+    top: -330px;
   }
 }
