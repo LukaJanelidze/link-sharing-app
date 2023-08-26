@@ -181,7 +181,7 @@ select {
   border-radius: 8px;
   border: 1px solid var(--borders, #d9d9d9);
   background: var(--white, #fff);
-  width: 255px;
+
   height: 48px;
   /*  p  */
   color: var(--dark-grey, #333);
@@ -214,7 +214,7 @@ input {
   align-items: center;
   gap: 12px;
   align-self: stretch;
-  width: 255px;
+  width: 100%;
   height: 48px;
   border-radius: 8px;
   border: 1px solid var(--borders, #d9d9d9);
@@ -253,6 +253,7 @@ input {
     padding: 24px;
     display: flex;
     flex-direction: column;
+    width: 100%;
     /* align-items: center; */
     /* justify-content: space-between; */
     gap: 24px;
@@ -324,6 +325,10 @@ input {
     height: 46px;
     right: 0;
   }
+  /*/ ////////// form  768px//////////*/
+  .form {
+    padding: 0 40px 40px 40px;
+  }
 }
 @media (min-width: 1440px) {
   .img-phone-mockup {
@@ -340,5 +345,8 @@ input {
     padding: 118px;
     border-radius: 12px;
     background-color: #fff;
+  }
+  .box {
+    width: 100%;
   }
 }
