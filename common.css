@@ -74,8 +74,8 @@ body {
   width: 100%;
 }
 
-.email-input[value],
-.password-input[value] {
+.email-input[placeholder],
+.password-input[placeholder] {
   color: var(--dark-grey, #333);
   font-size: 16px;
   font-weight: 400;
