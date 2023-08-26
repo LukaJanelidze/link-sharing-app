@@ -72,6 +72,16 @@ body {
   margin-top: 4px;
   max-width: 311px;
   width: 100%;
+  outline: var(--purple, #633cff);
+  transition: color 0.3s;
+}
+
+.email-input:hover {
+  border: 1px solid var(--purple, #633cff);
+}
+
+.password-input:hover {
+  border: 1px solid var(--purple, #633cff);
 }
 
 .email-input[placeholder],
@@ -120,6 +130,10 @@ body {
   line-height: 24px;
   border: none;
   margin-top: 24px;
+}
+
+.login-btn:hover {
+  background: var(--purple-hover-color, #beadff);
 }
 
 .new-acc {
