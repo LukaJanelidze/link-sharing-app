@@ -12,9 +12,13 @@ body {
   background: var(--white, #fff);
 }
 
-header {
+.header-btn {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  background: var(--white, #fff);
   padding: 16px 16px 16px 24px;
   gap: 16px;
 }
@@ -24,6 +28,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  width: 100%;
 }
 
 .btn {
@@ -33,6 +38,7 @@ header {
   align-items: center;
   border: none;
   cursor: pointer;
+  background-color: var(--white, #fff);
   gap: 8px;
   border-radius: 8px;
   border: 1px solid var(--purple, #633cff);
@@ -87,7 +93,6 @@ main {
   height: 104px;
   border-radius: 104px;
   border: 4px solid var(--purple, #633cff);
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat, #eee;
 }
 .name-email {
   display: flex;
@@ -131,4 +136,35 @@ h2 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 100%;
+    height: 357px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 32px 32px;
+    background: var(--purple, #633cff);
+    padding: 24px 24px 0 24px;
+  }
+  .root {
+    background: var(--light-grey, #fafafa);
+  }
+  section {
+    display: flex;
+    align-items: center;
+    width: 349px;
+    padding: 48px 56px;
+    gap: 56px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 228px;
+  }
+}
+@media (min-width: 1440px) {
+  section {
+    top: 208px;
+  }
 }
