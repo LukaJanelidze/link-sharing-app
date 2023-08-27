@@ -89,16 +89,14 @@ body {
   transition: color 0.3s;
 }
 
-.email-input:hover {
+.email-input:hover,
+.password-input:hover,
+.confirm-input:hover,
+.email-input:focus,
+.password-input:focus,
+.confirm-input:focus {
   border: 1px solid var(--purple, #633cff);
-}
-
-.password-input:hover {
-  border: 1px solid var(--purple, #633cff);
-}
-
-.confirm-input:hover {
-  border: 1px solid var(--purple, #633cff);
+  box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
 }
 
 .email-input[placeholder],
@@ -108,7 +106,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--dark-grey, #333);
   text-indent: 26px;
 }
 
