@@ -1,0 +1,239 @@
+@font-face {
+    font-family: instrumentBold;
+    src: url(./assets/fonts/static/InstrumentSans-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: instrumentRegular;
+    src: url(./assets/fonts/static/InstrumentSans-Regular.ttf);
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap");
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Instrument Sans", sans-serif;
+    background: white;
+    padding: 32px;
+  }
+  
+  .devlinks-img {
+    width: 100%;
+    max-width: 135px;
+  }
+  
+  .main {
+    background: white;
+    margin-top: 64px;
+    height: 812px;
+  }
+  
+  .create-account {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-grey, #333);
+    line-height: 36px;
+  }
+  
+  .create-paragraph {
+    color: var(--grey, #737373);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+  
+  .register-section {
+    margin-top: 40px;
+  }
+  
+  .email-text,
+  .create-password,
+  .confirm-password {
+    color: var(--dark-grey, #333);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  
+  .create-password,
+  .confirm-password,
+  .password-info {
+    margin-top: 24px;
+  }
+  
+  .email-input,
+  .password-input,
+  .confirm-input {
+    border-radius: 8px;
+    border: 1px solid var(--borders, #d9d9d9);
+    background: var(--white, #fff);
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+    max-width: 311px;
+    width: 100%;
+    outline: var(--purple, #633cff);
+    transition: color 0.3s;
+  }
+  
+  .email-input:hover {
+    border: 1px solid var(--purple, #633cff);
+  }
+  
+  .password-input:hover {
+    border: 1px solid var(--purple, #633cff);
+  }
+  
+  .confirm-input:hover {
+    border: 1px solid var(--purple, #633cff);
+  }
+  
+  .email-input[placeholder],
+  .password-input[placeholder],
+  .confirm-input[placeholder] {
+    color: var(--dark-grey, #333);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    text-indent: 26px;
+  }
+  
+  .input-with-logo,
+  .password-input-logo,
+  .confirm-input-logo {
+    position: relative;
+  }
+  
+  .input-logo,
+  .password-logo,
+  .confirm-logo {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+  }
+  
+  .password-info {
+    color: var(--grey, #737373);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  
+  .create-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--purple, #633cff);
+    width: 100%;
+    max-width: 311px;
+    padding: 11px 27px;
+    gap: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    border: none;
+    margin-top: 24px;
+  }
+  
+  .create-btn:hover {
+    background: var(--purple-hover-color, #beadff);
+  }
+  
+  .have-acc {
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .ask-have-acc {
+    color: var(--grey, #737373);
+    display: inline-block;
+  }
+  
+  .login-acc {
+    display: block;
+    color: var(--purple, #633cff);
+  }
+  
+  /* tablet */
+  
+  @media screen and (min-width: 768px) {
+    body {
+      background: var(--light-grey, #fafafa);
+    }
+  
+    .main {
+      display: inline-block;
+      width: 476px;
+      height: 618px;
+      padding: 40px;
+    }
+  
+    .devlinks-img {
+      position: relative;
+      top: -618px;
+      right: -310px;
+    }
+  
+    .create-account {
+      font-size: 32px;
+    }
+  
+    .email-input,
+    .password-input,
+    .confirm-input,
+    .create-btn {
+      max-width: 396px;
+    }
+  
+    .have-acc {
+      margin-top: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+    }
+  
+    .ask-have-acc {
+      color: var(--grey, #737373);
+      display: inline-block;
+    }
+  
+    .login-acc {
+      display: inline;
+    }
+  }
+  
+  /* decktop */
+  
+  @media screen and (min-width: 1440px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  
+    .devlinks-img {
+      position: relative;
+      top: -330px;
+    }
+  }
+  
