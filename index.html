@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../common.css" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="devlinks-img"
+        src="assets/images/logo-devlinks-large.svg"
+        alt="logo devlinks"
+      />
+      <div class="main">
+        <!-- login text section -->
+        <div class="create-text-section">
+          <h2 class="create-account">Login</h2>
+          <p class="create-paragraph">
+            Add your details below to get back into the app
+          </p>
+        </div>
+        <!-- email section -->
+        <div class="register-section">
+          <h4 class="email-text">Email address</h4>
+          <div class="input-with-logo">
+            <input
+              class="email-input"
+              type="text"
+              placeholder="e.g. alex@email.com"
+            />
+            <img
+              class="input-logo"
+              src="assets/images/icon-email.svg"
+              alt="email svg"
+            />
+          </div>
+          <!-- create password -->
+          <h4 class="create-password">Password</h4>
+          <div class="password-input-logo">
+            <input
+              class="password-input"
+              type="text"
+              placeholder="Enter your password"
+            />
+            <img
+              class="password-logo"
+              src="assets/images/icon-password.svg"
+              alt="password svg"
+            />
+          </div>
+          <!-- button section -->
+          <a class="create-btn" href="./pages/AddLink/addLink.html">Login</a>
+          <div class="have-acc">
+            <p class="ask-have-acc">
+              Don’t have an account?
+              <a class="login-acc" href="./pages/Register/register.html"
+                >Create account</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
