@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #fafafa;
+  font-family: "Instrument Sans", sans-serif;
 }
 
 header {
@@ -36,6 +37,17 @@ header {
 }
 
 .icon-links {
+  display: flex;
+  padding: 11px 27px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+
+.icon-profile {
   border-radius: 8px;
   background: var(--light-purple, #efebff);
   display: flex;
@@ -45,16 +57,13 @@ header {
   cursor: pointer;
   border: none;
 }
-
-.icon-profile {
+.eye {
   display: flex;
-  padding: 11px 27px;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-  background-color: #fff;
+}
+.eye:hover {
+  filter: invert(27%) sepia(72%) saturate(6225%) hue-rotate(248deg);
 }
 .icon-preview {
   display: flex;
@@ -70,6 +79,7 @@ header {
 section {
   background-color: #fafafa;
   padding: 16px;
+  width: 343px;
 }
 .img-phone-mockup {
   display: none;
@@ -86,8 +96,13 @@ section {
 .box {
   padding: 24px;
 }
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .profile {
-  margin-top: 16px;
+  margin-top: 30px;
   display: flex;
   padding: 20px;
   flex-direction: column;
@@ -109,6 +124,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 193px;
   gap: 8px;
   padding: 61px 38px 60px 39px;
   border-radius: 12px;
@@ -167,6 +183,11 @@ input {
   width: 100%;
   height: 46px;
 }
+hr {
+  border: none;
+  height: 1px;
+  background: var(--borders, #d9d9d9);
+}
 .btn-btn {
   padding: 16px 16px 16px 16px;
 }
@@ -191,6 +212,9 @@ input {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+}
+.btnSave:hover {
+  box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -233,7 +257,9 @@ input {
     line-height: 150%; /* 24px */
     cursor: pointer;
   }
-
+  .tab-btn:hover {
+    background: var(--light-purple, #efebff);
+  }
   .profile {
     flex-direction: row;
     align-items: center;
@@ -271,6 +297,10 @@ input {
   .box {
     padding: 40px;
   }
+  section {
+    width: 720px;
+    margin: auto;
+  }
 }
 @media (min-width: 1440px) {
   .img-phone-mockup {
@@ -281,10 +311,14 @@ input {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     gap: 24px;
   }
+  .profile {
+    margin: 0;
+  }
   .phone-mockup {
-    padding: 118px;
+    padding: 110px;
     border-radius: 12px;
     background-color: #fff;
   }
