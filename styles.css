@@ -1,15 +1,3 @@
-@font-face {
-  font-family: instrumentBold;
-  src: url(./assets/fonts/static/InstrumentSans-Bold.ttf);
-}
-
-@font-face {
-  font-family: instrumentRegular;
-  src: url(./assets/fonts/static/InstrumentSans-Regular.ttf);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -21,9 +9,7 @@ body {
   background: white;
   padding: 32px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
@@ -180,6 +166,7 @@ body {
 @media screen and (min-width: 768px) {
   body {
     background: var(--light-grey, #fafafa);
+    align-items: center;
   }
 
   .main {
