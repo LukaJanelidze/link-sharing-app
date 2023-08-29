@@ -54,5 +54,16 @@ createButton.addEventListener("click", () => {
 });
 
 emailInput.addEventListener("input", () => {
-  emailInput.style.border = "";
+    emailInput.style.border = "";
+    emailError.innerText = "";
 });
+
+passwordInput.addEventListener("input", () => {
+    passwordInput.style.border = "";
+    passwordError.innerText = ""
+  });
+
+confirmPasswordInput.addEventListener("input", () => {
+    confirmPasswordInput.style.border = "";
+    confirmPasswordError.innerText = ""
+  });
