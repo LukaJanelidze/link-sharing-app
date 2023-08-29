@@ -161,6 +161,26 @@ body {
   color: var(--purple, #633cff);
 }
 
+.input-with-logo {
+  position: relative;
+  /* display: inline-block; */
+}
+
+#password-validation,
+#login-validation {
+  /* display: none; */
+  color: var(--red, #ff3939);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
 /* tablet */
 
 @media screen and (min-width: 768px) {
