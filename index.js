@@ -24,7 +24,15 @@ createButton.addEventListener("click", () => {
   }
 
   if (emailValid && passwordValid) {
-    createButton.setAttribute("href", "./pages/AddLink/addLink.html");
+    const users = JSON.parse(localStorage.getItem("users"));
+    users?.map((item) => {
+      if (
+        item.email == emailInput.value &&
+        item.password == passwordInput.value
+      ) {
+        createButton.setAttribute("href", "./pages/AddLink/addLink.html");
+      }
+    });
   }
 });
 
