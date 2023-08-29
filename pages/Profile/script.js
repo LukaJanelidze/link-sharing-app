@@ -6,12 +6,12 @@ inputFields.forEach((inputField, index) => {
   inputField.addEventListener("input", () => {
     inputField.classList.remove("error-border");
     errorMessages[index].style.display = "none";
-    inputField.style.border = ""; // Reset border to default
+    inputField.style.border = "";
   });
 });
 
 btnSave.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent form submission for demonstration purposes
+  event.preventDefault();
 
   inputFields.forEach((inputField, index) => {
     if (inputField.value.trim() === "") {
