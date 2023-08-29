@@ -121,18 +121,27 @@ section {
 
 .svg-size {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 193px;
   gap: 8px;
-  padding: 61px 38px 60px 39px;
+  padding: 35px 38px 35px 39px;
   border-radius: 12px;
   background: var(--light-purple, #efebff);
+  position: relative;
 }
+
+.upload-input {
+  display: none;
+}
+
 .upload {
+  font-size: 14px;
   color: var(--purple, #633cff);
 }
+
 .svg-text {
   font-size: 12px;
 }
