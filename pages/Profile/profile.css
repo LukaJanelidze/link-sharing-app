@@ -57,6 +57,9 @@ header {
   cursor: pointer;
   border: none;
 }
+.blue-color {
+  filter: invert(27%) sepia(72%) saturate(6225%) hue-rotate(248deg);
+}
 .eye {
   display: flex;
   flex-direction: row;
@@ -121,18 +124,27 @@ section {
 
 .svg-size {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 193px;
   gap: 8px;
-  padding: 61px 38px 60px 39px;
+  padding: 35px 38px 35px 39px;
   border-radius: 12px;
   background: var(--light-purple, #efebff);
+  position: relative;
 }
+
+.upload-input {
+  display: none;
+}
+
 .upload {
+  font-size: 14px;
   color: var(--purple, #633cff);
 }
+
 .svg-text {
   font-size: 12px;
 }
@@ -160,6 +172,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: start;
+  position: relative;
   width: 100%;
 }
 label {
@@ -182,6 +195,27 @@ input {
   background: var(--white, #fff);
   width: 100%;
   height: 46px;
+}
+
+input:focus {
+  border: 1px solid var(--purple, #633cff);
+  background: var(--white, #fff);
+
+  box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+}
+.error-message {
+  position: absolute;
+  display: none;
+  right: 16px;
+  top: 12px;
+  color: var(--red, #ff3939);
+  text-align: right;
+  /*  */
+  font-family: Instrument Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
 }
 hr {
   border: none;
@@ -215,6 +249,14 @@ hr {
 }
 .btnSave:hover {
   box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+}
+h3 {
+  color: var(--dark-grey, #333);
+  font-family: Instrument Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 36px */
 }
 
 @media (min-width: 768px) {
@@ -291,15 +333,16 @@ hr {
     height: 46px;
     right: 0;
   }
-  .main {
-    width: 100%;
-  }
+
   .box {
     padding: 40px;
   }
   section {
     width: 720px;
     margin: auto;
+  }
+  h3 {
+    font-size: 32px;
   }
 }
 @media (min-width: 1440px) {
@@ -311,24 +354,31 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 1392px;
     gap: 24px;
+    padding: 0;
   }
   .profile {
-    margin: 0;
+    margin-top: 16px;
   }
   .phone-mockup {
-    padding: 110px;
+    padding: 140px;
     border-radius: 12px;
     background-color: #fff;
   }
   .box {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 40px 40px 135px 40px;
+    gap: 24px;
+    padding: 42px 40px 135px 40px;
   }
   .svg-text {
-    width: 190px;
+    width: 200px;
+  }
+  .main {
+    width: 780px;
+  }
+  .btn-btn {
+    padding: 10px 40px 30px 16px;
   }
 }
