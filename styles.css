@@ -163,15 +163,13 @@ body {
 
 .input-with-logo {
   position: relative;
-  /* display: inline-block; */
 }
 
 #password-validation,
 #login-validation {
-  /* display: none; */
   color: var(--red, #ff3939);
   font-family: "Instrument Sans", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 400;
   text-align: right;
   position: absolute;
@@ -228,6 +226,11 @@ body {
   .login-acc {
     display: inline;
   }
+
+  #password-validation,
+  #login-validation {
+    font-size: 12px;
+  }
 }
 
 /* decktop */
@@ -238,5 +241,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+  }
+
+  #password-validation,
+  #login-validation {
+    font-size: 12px;
   }
 }
