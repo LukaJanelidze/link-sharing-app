@@ -352,6 +352,7 @@ h3 {
     justify-content: space-between;
     width: 1392px;
     gap: 24px;
+    padding: 0;
   }
   .profile {
     margin-top: 16px;
@@ -371,7 +372,7 @@ h3 {
     width: 200px;
   }
   .main {
-    width: 750px;
+    width: 775px;
   }
   .btn-btn {
     padding: 10px 40px 30px 16px;
