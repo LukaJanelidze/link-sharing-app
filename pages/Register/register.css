@@ -1,0 +1,30 @@
+.input-with-Logo {
+    position: relative;
+}
+
+#email-error{
+    color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 12px;
+}
+
+#password-error{
+    color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 12px;
+}
+
+#confirm-password-error {
+    color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 12px;
+}
