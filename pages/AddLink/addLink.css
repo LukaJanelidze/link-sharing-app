@@ -477,10 +477,12 @@ hr {
   }
 
   .phone-mockup {
+    position: relative;
     padding: 140px;
     border-radius: 12px;
     background-color: #fff;
   }
+
   .box {
     width: 775px;
   }
