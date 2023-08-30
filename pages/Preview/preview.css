@@ -52,6 +52,30 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  /* effect*/
+  transition: all 0.2s;
+  padding-bottom: 8px;
+}
+.btn::before {
+  /* effect*/
+  content: "";
+  transition: all0.4s;
+  z-index: 1;
+}
+.btn:hover::before {
+  /* effect*/
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:hover {
+  box-shadow: inset 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+  /* effect*/
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
 }
 .btn-btn {
   display: flex;
@@ -72,8 +96,31 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 24px */
+  /* effect*/
+  transition: all 0.2s;
+  padding-bottom: 8px;
 }
-
+.btn-btn::before {
+  /* effect*/
+  content: "";
+  transition: all0.4s;
+  z-index: 1;
+}
+.btn-btn:hover::before {
+  /* effect*/
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn-btn:hover {
+  box-shadow: inset 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+  /* effect*/
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+.btn-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
 /* //////// section ///////////*/
 
 section {
