@@ -68,3 +68,24 @@ document.addEventListener("input", () => {
   storeLinkDataAtLocalStorage();
   addResults();
 });
+
+addLinkButton?.addEventListener("click", () => {
+  links.insertAdjacentHTML("beforeend", linkChild(linksArray.length));
+  addResults();
+});
+
+save.addEventListener("click", () => {
+  linkInputs.map((item) => {
+    if (!item.value) {
+      item.style.border = "1px solid red";
+      item.nextElementSibling.style.display = "block";
+    } else {
+      item.style.border = "";
+      item.nextElementSibling.style.display = "none";
+    }
+  });
+
+  if (linkInputs.every((item) => item.value) && linksArray.length != 0) {
+    save.setAttribute("href", "../Profile/profile.html");
+  }
+});
