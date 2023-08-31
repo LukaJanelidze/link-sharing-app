@@ -33,16 +33,36 @@ const saveBtn = document.querySelector(".btnSave");
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 
+const storedFirstName = localStorage.getItem("firstName");
+const storedLastName = localStorage.getItem("lastName");
+const storedUserEmail = localStorage.getItem("userEmail");
+
+if (storedFirstName) {
+  firstName.innerText = storedFirstName;
+  firstNameInput.value = storedFirstName;
+}
+
+if (storedLastName) {
+  lastName.innerText = storedLastName;
+  lastNameInput.value = storedLastName;
+}
+
+if (storedUserEmail) {
+  userEmail.innerText = storedUserEmail;
+  emailAddressInput.value = storedUserEmail;
+}
+
 firstNameInput.addEventListener("input", (event) => {
   firstName.innerText = event.target.value;
+  localStorage.setItem("firstName", event.target.value);
 });
 
 lastNameInput.addEventListener("input", (event) => {
   lastName.innerText = event.target.value;
+  localStorage.setItem("lastName", event.target.value);
 });
 
 emailAddressInput.addEventListener("input", (event) => {
   userEmail.innerText = event.target.value;
+  localStorage.setItem("userEmail", event.target.value);
 });
-
-
