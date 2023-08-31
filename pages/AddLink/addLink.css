@@ -245,6 +245,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 }
 select {
   display: flex;
@@ -256,7 +257,6 @@ select {
   border: 1px solid var(--borders, #d9d9d9);
   background: var(--white, #fff);
   height: 48px;
-  /*  p  */
   color: var(--dark-grey, #333);
   font-family: Instrument Sans;
   font-size: 16px;

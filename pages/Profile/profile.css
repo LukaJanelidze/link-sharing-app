@@ -133,6 +133,62 @@ section {
 .img-phone-mockup {
   display: none;
 }
+
+.phone-mockup {
+  position: relative;
+}
+
+.profile-img {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: none;
+}
+
+.user-info {
+  position: absolute;
+  top: 37.8%;
+  left: 25.5%;
+  transform: translateY(-50%);
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 285px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+#first-name,
+#last-name {
+  color: var(--Dark-Grey, #333);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+.full-name {
+  display: flex;
+  gap: 5px;
+  height: 27px;
+}
+
+#user-email {
+  color: var(--Grey, #737373);
+  font-size: 14px;
+  font-weight: 400;
+  height: 21px;
+  font-family: "Instrument Sans", sans-serif;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -168,13 +224,15 @@ section {
   gap: 24px;
 }
 
-.svg-size {
+.svg-size,
+.svg-size-label {
   display: flex;
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 193px;
+  height: 193px;
   gap: 8px;
   padding: 35px 38px 35px 39px;
   border-radius: 12px;
@@ -182,8 +240,29 @@ section {
   position: relative;
 }
 
+.overlay {
+  width: 193px;
+  min-height: 193px;
+  background: red;
+  position: absolute;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.background-svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 193px;
+  height: 193px;
+  border-radius: 12px;
+  display: none;
+}
+
 .upload-input {
   display: none;
+  position: relative;
+  z-index: 9;
 }
 
 .upload {
