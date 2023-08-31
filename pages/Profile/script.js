@@ -21,3 +21,47 @@ btnSave.addEventListener("click", (event) => {
     }
   });
 });
+
+// ----------------------------------
+
+const userFullName = document.getElementById("user-full-name");
+const userEmail = document.getElementById("user-email");
+const firsNameInput = document.getElementById("firs-name-input");
+const lastNameInput = document.getElementById("last-name-input");
+const emailAddressInput = document.getElementById("email-address-input");
+const saveBtn = document.querySelector(".btnSave");
+
+// show name
+
+function showName(inputName) {
+  userFullName.innerText = inputName;
+}
+
+// show email
+
+function showEmail(inputEmail) {
+  userEmail.innerText = inputEmail;
+}
+
+saveBtn.addEventListener("click", () => {
+  showName(firsNameInput.value + " " + lastNameInput.value);
+  showEmail(emailAddressInput.value);
+
+  const prevUsers = JSON.parse(localStorage.getItem("information"));
+  if (prevUsers) {
+    localStorage.setItem(
+      "information",
+      JSON.stringify([
+        ...prevUsers,
+        { email: firsNameInput.value, password: passwordInput.value },
+      ])
+    );
+  } else {
+    localStorage.setItem(
+      "users",
+      JSON.stringify([
+        { email: emailInput.value, password: emailAddressInput.value },
+      ])
+    );
+  }
+});
