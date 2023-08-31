@@ -221,3 +221,34 @@ function linkChild(num) {
   </form> 
 </div>`;
 }
+
+function linkResult(platform, link, color) {
+  return `<a class="social-link" href="${link}" ${
+    link && `target="blank"`
+  } style="background-color: ${color}; border: ${
+    platform == "Frontend Mentor" ? "1px solid #D9D9D9" : ""
+  }; padding: ${platform == "Frontend Mentor" ? "9.5px 16px" : "11px 16px"}">
+  <div style="color: ${platform == "Frontend Mentor" ? "black" : "white"}">
+    <img 
+    
+    src="../../assets/images/icon-${platform
+      .toLowerCase()
+      .replace(" ", "-")
+      .replace(".", "")}.svg" 
+      style="filter: ${
+        platform != "Frontend Mentor"
+          ? "invert(92%) sepia(94%) saturate(22%) hue-rotate(16deg) brightness(504%) contrast(106%)"
+          : ""
+      }"
+      />
+    ${platform}
+    
+   
+  </div>
+  <img src="../../assets/images/icon-arrow-right.svg" alt="" style="filter: ${
+    platform == "Frontend Mentor"
+      ? "invert(47%) sepia(0%) saturate(71%) hue-rotate(263deg) brightness(95%) contrast(93%)"
+      : ""
+  }"/>
+</a>`;
+}
