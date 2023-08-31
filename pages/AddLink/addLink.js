@@ -89,3 +89,33 @@ save.addEventListener("click", () => {
     save.setAttribute("href", "../Profile/profile.html");
   }
 });
+
+//utils
+
+function addEventListenerToRemoveButton() {
+  removeButtons.map((remove, index) => {
+    let numbers = Array.from(document.querySelectorAll(".form p strong"));
+    numbers[index].innerText = `Link #${index + 1}`;
+
+    remove.addEventListener("click", () => {
+      remove.parentElement.parentElement.parentElement.remove();
+    });
+    const collectionArray = linksArray.map((element) => element.outerHTML);
+
+    localStorage.setItem("links", collectionArray.join(" "));
+  });
+}
+
+function hideAndAppearEmptySection() {
+  if (linksArray.length == 0) {
+    empty.style.display = "block";
+    links.style.display = "none";
+    save.style.opacity = "0.25";
+  } else {
+    empty.style.display = "none";
+    links.style.display = "block";
+    save.style.opacity = "1";
+  }
+}
+
+function getColor(platform){}
