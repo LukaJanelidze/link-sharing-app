@@ -36,3 +36,35 @@ linksArray?.map((item, index) => {
 
 hideAndAppearEmptySection();
 addEventListenerToRemoveButton();
+
+//event listeners
+
+document.addEventListener("click", () => {
+  select = [...document.querySelectorAll("select")];
+  
+  linkInputs = Array.from(document.querySelectorAll(".link-input"));
+  socialLinks = Array.from(document.getElementsByClassName("social-link"));
+  removeButtons = Array.from(document.getElementsByClassName("remove-btn"));
+  linksArray = Array.from(document.getElementsByClassName("form"));
+
+  const collectionArray = linksArray.map((element) => element.outerHTML);
+  localStorage.setItem("links", collectionArray.join(" "));
+
+  console.log(collectionArray.join(" "));
+  storeLinkDataAtLocalStorage();
+  hideAndAppearEmptySection();
+  addEventListenerToRemoveButton();
+  addResults();
+
+  linkInputs.map((item) => {
+    item.addEventListener("input", () => {
+      console.log(item);
+      item.style.border = "";
+      item.nextElementSibling.style.display = "none";
+    });
+  });
+});
+document.addEventListener("input", () => {
+  storeLinkDataAtLocalStorage();
+  addResults();
+});
