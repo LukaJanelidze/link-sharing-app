@@ -7,3 +7,95 @@ a {
 input {
   font-family: "Instrument Sans", sans-serif;
 }
+
+.profile-img {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: none;
+}
+
+.user-info {
+  position: absolute;
+  top: 37.8%;
+  left: 25.5%;
+  transform: translateY(-50%);
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 285px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.full-name {
+  display: flex;
+  gap: 5px;
+  height: 27px;
+}
+
+#first-name,
+#last-name {
+  color: var(--Dark-Grey, #333);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
+
+#user-email {
+  color: var(--Grey, #737373);
+  font-size: 14px;
+  font-weight: 400;
+  height: 21px;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+/* addlinks */
+
+.link-results {
+  flex-direction: column;
+  gap: 19px;
+  position: absolute;
+  top: 402px;
+  left: 160px;
+  display: none;
+  max-height: 320px;
+  overflow-y: hidden;
+  padding-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 11px 16px;
+  border-radius: 8px;
+  color: var(--white, #fff);
+  width: 237px;
+  font-family: Instrument Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.social-link div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 1440px) {
+  .link-results {
+    display: flex;
+  }
+}
