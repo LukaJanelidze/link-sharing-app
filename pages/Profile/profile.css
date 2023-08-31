@@ -476,6 +476,7 @@ h3 {
   h3 {
     font-size: 32px;
   }
+
 }
 @media (min-width: 1440px) {
   .img-phone-mockup {
@@ -516,4 +517,5 @@ h3 {
   .btn-btn {
     padding: 10px 40px 30px 16px;
   }
+
 }

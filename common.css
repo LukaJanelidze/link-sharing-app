@@ -10,7 +10,7 @@ input {
 
 .profile-img {
   position: absolute;
-  top: 200px;
+  top: 188px;
   left: 50%;
   transform: translateX(-50%);
   width: 96px;
@@ -21,7 +21,7 @@ input {
 
 .user-info {
   position: absolute;
-  top: 37.8%;
+  top: 37.1%;
   left: 25.5%;
   transform: translateY(-50%);
   margin: 0;
@@ -34,6 +34,7 @@ input {
   flex-direction: column;
   align-items: center;
   gap: 1px;
+  display: none;
 }
 
 .full-name {
@@ -94,8 +95,18 @@ input {
   gap: 8px;
 }
 
+@media (min-width: 768px) {
+  .user-info {
+    display: none;
+  }
+}
+
 @media (min-width: 1440px) {
   .link-results {
+    display: flex;
+  }
+
+  .user-info {
     display: flex;
   }
 }
