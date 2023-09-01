@@ -129,6 +129,7 @@ section {
   background-color: #fafafa;
   padding: 16px;
   width: 343px;
+  
 }
 .img-phone-mockup {
   display: none;
@@ -504,7 +505,7 @@ h3 {
     margin-top: 16px;
   }
   .phone-mockup {
-    padding: 125px;
+    padding: 130px;
     border-radius: 12px;
     background-color: #fff;
   }
