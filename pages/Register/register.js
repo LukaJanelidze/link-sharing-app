@@ -4,7 +4,7 @@ const emailError = document.getElementById("email-error");
 const passwordInput = document.querySelector(".password-input");
 const passwordError = document.getElementById("password-error");
 const confirmPasswordInput = document.querySelector(".confirm-input");
-const confirmPasswordError = document.getElementById("confirm-password-error")
+const confirmPasswordError = document.getElementById("confirm-password-error");
 
 let emailValid = false;
 let passwordValid = false;
