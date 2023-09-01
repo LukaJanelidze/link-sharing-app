@@ -70,6 +70,12 @@ input {
   display: none;
 }
 
+.saved-text,
+.copy-text,
+.saveimg {
+  display: none;
+}
+
 /* addlinks */
 
 .link-results {
@@ -137,7 +143,9 @@ input {
   }
 
   .saved-text,
-  .copy-text {
+  .copy-text,
+  .saveimg {
+    display: block;
     font-family: "Instrument Sans", sans-serif;
     color: var(--Light-Grey, #fafafa);
     font-size: 16px;
