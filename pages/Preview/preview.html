@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="preview.css" />
-    <title>Document</title>
+    <title>Preview</title>
   </head>
   <body>
     <div class="root">
       <header>
-        <a href="../Profile/profile.html">
-          <div class="header-btn">
+        <div class="header-btn">
+          <a href="../Profile/profile.html">
             <button class="btn">Back to Editor</button>
-            <button class="btn-btn">Share Link</button>
-          </div>
-        </a>
+          </a>
+          <button class="btn-btn">Share Link</button>
+        </div>
       </header>
       <section>
         <main>
@@ -30,6 +30,10 @@
           <div class="links"></div>
         </main>
       </section>
+    </div>
+    <div class="share-section">
+      <img src="/assets/images/icon-link-copied-to-clipboard.svg" alt="" />
+      <p class="copy-text">The link has been copied to your clipboard!</p>
     </div>
     <script src="preview.js"></script>
   </body>

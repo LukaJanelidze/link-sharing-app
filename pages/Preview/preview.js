@@ -9,6 +9,8 @@ const userName = document.querySelector(".user-name");
 const lastName = document.querySelector(".last-name");
 const email = document.querySelector(".email");
 const links = document.querySelector(".links");
+const shareSection = document.querySelector(".share-section");
+const btnBtn = document.querySelector(".btn-btn");
 
 if (storedProfileImg) {
   profileImage.setAttribute("src", storedProfileImg);
@@ -29,3 +31,11 @@ if (storedUserEmail) {
 if (storedLinks) {
   links.insertAdjacentHTML("beforeend", storedLinks);
 }
+
+btnBtn.addEventListener("click", (event) => {
+  shareSection.style.display = "flex";
+
+  setTimeout(() => {
+    shareSection.style.display = "none";
+  }, 2000);
+});

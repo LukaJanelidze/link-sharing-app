@@ -21,7 +21,7 @@ const savedSection = document.querySelector(".saved-section");
 const userInfo = document.querySelector(".user-info");
 const uploadImageText = document.querySelector(".upload");
 const changeImageText = document.querySelector(".change");
-const svgElement = document.querySelector('svg');
+const svgElement = document.querySelector("svg");
 
 const linkResults = localStorage.getItem("linkResults");
 if (linkResults) {
@@ -67,7 +67,7 @@ imageInput.addEventListener("input", (event) => {
   };
   uploadImageText.style.display = "none";
   changeImageText.style.display = "block";
-  svgElement.querySelector('path').setAttribute('fill', 'white');
+  svgElement.querySelector("path").setAttribute("fill", "white");
   reader.readAsDataURL(file);
 });
 
