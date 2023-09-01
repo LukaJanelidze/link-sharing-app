@@ -51,6 +51,12 @@ if (storedUserEmail) {
   userEmail.innerText = storedUserEmail;
   emailAddressInput.value = storedUserEmail;
   userInfo.classList.add("user-info-active");
+  svgSizeLabel.style.background = "none";
+  backgroundSvg.setAttribute("src", storedImage);
+  backgroundSvg.style.display = "block";
+  uploadImageText.style.display = "none";
+  changeImageText.style.display = "block";
+  svgElement.querySelector("path").setAttribute("fill", "white");
 }
 // ----------------------------------------
 
