@@ -1,3 +1,5 @@
+localStorage.removeItem("token");
+
 const createButton = document.querySelector(".create-btn");
 const emailInput = document.querySelector(".email-input");
 const passwordInput = document.querySelector(".password-input");
@@ -6,6 +8,7 @@ const passwordValidation = document.getElementById("password-validation");
 const emailText = document.querySelector(".email-text");
 const passwordText = document.querySelector(".create-password");
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+const authError = document.querySelector(".auth-error");
 
 let emailValid = false;
 let passwordValid = false;
@@ -35,8 +38,15 @@ createButton.addEventListener("click", () => {
         item.password == passwordInput.value
       ) {
         createButton.setAttribute("href", "./pages/AddLink/addLink.html");
+        localStorage.setItem("token", "true");
       }
     });
+    const storedToken = localStorage.getItem("token");
+    if (!storedToken) {
+      authError.innerText = "Invalid Email or Password";
+    } else {
+      authError.innerText = "";
+    }
   }
 });
 
@@ -44,10 +54,12 @@ emailInput.addEventListener("input", () => {
   emailInput.style.border = "";
   loginValid.innerText = "";
   emailText.style.color = "var(--dark-grey, #333)";
+  authError.innerText = "";
 });
 
 passwordInput.addEventListener("input", () => {
   passwordInput.style.border = "";
   passwordValidation.innerText = "";
   passwordText.style.color = "var(--dark-grey, #333)";
+  authError.innerText = "";
 });

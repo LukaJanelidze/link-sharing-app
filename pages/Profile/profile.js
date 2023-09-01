@@ -1,3 +1,8 @@
+const storedToken = localStorage.getItem("token");
+if (!storedToken) {
+  window.location.href = "../../index.html";
+}
+
 const inputFields = document.querySelectorAll("input[required]");
 const errorMessages = document.querySelectorAll(".error-message");
 const btnSave = document.querySelector(".btnSave");

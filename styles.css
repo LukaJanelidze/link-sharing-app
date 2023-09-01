@@ -39,6 +39,14 @@ body {
   margin-top: 8px;
 }
 
+.auth-error {
+  height: 15px;
+  color: var(--Red, #ff3939);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
 .register-section {
   margin-top: 40px;
 }
