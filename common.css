@@ -95,12 +95,6 @@ input {
   gap: 8px;
 }
 
-@media (min-width: 768px) {
-  .user-info {
-    display: none;
-  }
-}
-
 @media (min-width: 1440px) {
   .link-results {
     display: flex;
@@ -108,5 +102,9 @@ input {
 
   .user-info {
     display: flex;
+  }
+
+  .img-appear {
+    display: block;
   }
 }

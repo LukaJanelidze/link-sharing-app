@@ -74,11 +74,6 @@ document.addEventListener("click", () => {
   removeButtons = Array.from(document.getElementsByClassName("remove-btn"));
   linksArray = Array.from(document.getElementsByClassName("form"));
 
-  const collectionArray = linksArray.map((element) => element.outerHTML);
-  localStorage.setItem("links", collectionArray.join(" "));
-
-  console.log(collectionArray.join(" "));
-  storeLinkDataAtLocalStorage();
   hideAndAppearEmptySection();
   addEventListenerToRemoveButton();
   addResults();
@@ -92,7 +87,6 @@ document.addEventListener("click", () => {
   });
 });
 document.addEventListener("input", () => {
-  storeLinkDataAtLocalStorage();
   addResults();
 });
 
@@ -113,7 +107,12 @@ save.addEventListener("click", () => {
   });
 
   if (linkInputs.every((item) => item.value) && linksArray.length != 0) {
-    save.setAttribute("href", "../Profile/profile.html");
+    const collectionArray = linksArray.map((element) => element.outerHTML);
+    localStorage.setItem("links", collectionArray.join(" "));
+    storeLinkDataAtLocalStorage();
+    socialLinks = Array.from(document.getElementsByClassName("social-link"));
+    const linkResults = socialLinks?.map((element) => element.outerHTML);
+    localStorage.setItem("linkResults", linkResults.join(" "));
   }
 });
 
@@ -127,9 +126,6 @@ function addEventListenerToRemoveButton() {
     remove.addEventListener("click", () => {
       remove.parentElement.parentElement.parentElement.remove();
     });
-    const collectionArray = linksArray.map((element) => element.outerHTML);
-
-    localStorage.setItem("links", collectionArray.join(" "));
   });
 }
 
@@ -201,18 +197,24 @@ function storeLinkDataAtLocalStorage() {
 }
 
 function addResults() {
-  const linkData = JSON.parse(localStorage.getItem("linkData"));
-  console.log(linkData);
+  console.log(linksArray);
+  let arr = [];
+  linksArray.map((item) => {
+    arr.push({
+      platform: item.querySelector(".platform-input").value,
+      link: item.querySelector(".link-input").value,
+      color: getColor(item.querySelector(".platform-input").value),
+    });
+  });
+  console.log(arr);
+
   phone.innerHTML = "";
-  linkData.map((item) => {
+  arr.map((item) => {
     phone.insertAdjacentHTML(
       "beforeend",
       linkResult(item.platform, item.link, item.color)
     );
   });
-  socialLinks = Array.from(document.getElementsByClassName("social-link"));
-  const linkResults = socialLinks?.map((element) => element.outerHTML);
-  localStorage.setItem("linkResults", linkResults.join(" "));
 }
 
 function linkChild(num) {

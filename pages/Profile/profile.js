@@ -26,7 +26,7 @@ if (linkResults) {
 const storedImage = localStorage.getItem("profileImg");
 if (storedImage) {
   profileImage.setAttribute("src", storedImage);
-  profileImage.style.display = "block";
+  profileImage.classList.add("img-appear");
 }
 
 if (storedFirstName) {
@@ -45,16 +45,18 @@ if (storedUserEmail) {
 }
 // ----------------------------------------
 
+let temporaryImage;
+
 imageInput.addEventListener("input", (event) => {
   const file = event.target.files[0];
   const reader = new FileReader();
   reader.onloadend = () => {
     profileImage.setAttribute("src", reader.result);
-    profileImage.style.display = "block";
+    profileImage.classList.add("img-appear");
     svgSizeLabel.style.background = "none";
     backgroundSvg.setAttribute("src", reader.result);
     backgroundSvg.style.display = "block";
-    localStorage.setItem("profileImg", reader.result);
+    temporaryImage = reader.result;
   };
   reader.readAsDataURL(file);
 });
@@ -69,29 +71,34 @@ inputFields.forEach((inputField, index) => {
 
 btnSave.addEventListener("click", (event) => {
   event.preventDefault();
+  let formValid = true;
 
   inputFields.forEach((inputField, index) => {
     if (inputField.value.trim() === "") {
       inputField.classList.add("error-border");
       errorMessages[index].style.display = "inline";
       inputField.style.border = "1px solid red";
+      formValid = false;
     }
   });
+  if (formValid && temporaryImage) {
+    localStorage.setItem("profileImg", temporaryImage);
+    localStorage.setItem("firstName", firstNameInput.value);
+    localStorage.setItem("lastName", lastNameInput.value);
+    localStorage.setItem("userEmail", emailAddressInput.value);
+  }
 });
 
 // local storage
 
 firstNameInput.addEventListener("input", (event) => {
   firstName.innerText = event.target.value;
-  localStorage.setItem("firstName", event.target.value);
 });
 
 lastNameInput.addEventListener("input", (event) => {
   lastName.innerText = event.target.value;
-  localStorage.setItem("lastName", event.target.value);
 });
 
 emailAddressInput.addEventListener("input", (event) => {
   userEmail.innerText = event.target.value;
-  localStorage.setItem("userEmail", event.target.value);
 });
