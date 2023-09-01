@@ -136,6 +136,56 @@ main {
   justify-content: space-between;
   gap: 25px;
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.links::before {
+  /* effect*/
+  content: "";
+  transition: all0.4s;
+  z-index: 1;
+}
+.links:hover::before {
+  /* effect*/
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.links:hover {
+  /* effect*/
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+.links:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+.links {
+  height: 555px;
+  overflow-y: auto;
+}
+.links::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 20px;
+  display: none;
+}
+
+/* Track */
+.links::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.links::-webkit-scrollbar-thumb {
+  background: #737373;
+  border-radius: 10px;
+}
+
 .profile-image {
   width: 104px;
   height: 104px;

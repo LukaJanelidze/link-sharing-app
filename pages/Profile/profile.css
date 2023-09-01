@@ -216,7 +216,7 @@ section {
 }
 
 .upload {
-  color: var(--Purple, #633CFF);
+  color: var(--Purple, #633cff);
   font-family: Instrument Sans;
   font-size: 16px;
   font-style: normal;
@@ -225,7 +225,7 @@ section {
 }
 
 .change {
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   font-family: Instrument Sans;
   font-size: 16px;
   font-style: normal;
@@ -483,7 +483,6 @@ h3 {
   h3 {
     font-size: 32px;
   }
-
 }
 @media (min-width: 1440px) {
   .img-phone-mockup {
@@ -524,5 +523,4 @@ h3 {
   .btn-btn {
     padding: 10px 40px 30px 16px;
   }
-
 }
