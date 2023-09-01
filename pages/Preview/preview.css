@@ -136,7 +136,7 @@ main {
   justify-content: space-between;
   gap: 25px;
 }
-.imiges {
+.profile-image {
   width: 104px;
   height: 104px;
   border-radius: 104px;
@@ -157,6 +157,12 @@ h2 {
   font-weight: 700;
   line-height: 150%; /* 48px */
 }
+
+.full-name {
+  display: flex;
+  gap: 5px;
+}
+
 .email {
   color: var(--grey, #737373);
   font-family: Instrument Sans;
