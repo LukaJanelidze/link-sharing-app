@@ -122,7 +122,6 @@ body {
 
 .create-btn {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
@@ -137,11 +136,30 @@ body {
   line-height: 24px;
   border: none;
   margin-top: 24px;
-  cursor: pointer;
+  /* effect*/
+  transition: all 0.2s;
 }
-
+.create-btn::before {
+  /* effect*/
+  content: "";
+  transition: all0.4s;
+  z-index: 1;
+}
+.create-btn::before {
+  /* effect*/
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .create-btn:hover {
   background: var(--purple-hover-color, #beadff);
+  box-shadow: inset 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
+  /* effect*/
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
+}
+.create-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2);
 }
 
 .have-acc {
