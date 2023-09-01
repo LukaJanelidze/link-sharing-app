@@ -14,6 +14,8 @@ const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const userEmail = document.getElementById("user-email");
 const profileImage = document.querySelector(".profile-img");
+const userInfo = document.querySelector(".user-info");
+const savedSection = document.querySelector(".saved-section");
 
 const storedLinks = localStorage.getItem("links");
 if (storedLinks) {
@@ -28,19 +30,23 @@ if (linkResults) {
 const storedImage = localStorage.getItem("profileImg");
 if (storedImage) {
   profileImage.setAttribute("src", storedImage);
-  profileImage.style.display = "block";
+  profileImage.classList.add("img-appear");
 }
 
 if (storedFirstName) {
   firstName.innerText = storedFirstName;
+  userInfo.classList.add("user-info-active");
+  userInfo.classList.add("user-info-active");
 }
 
 if (storedLastName) {
   lastName.innerText = storedLastName;
+  userInfo.classList.add("user-info-active");
 }
 
 if (storedUserEmail) {
   userEmail.innerText = storedUserEmail;
+  userInfo.classList.add("user-info-active");
 }
 
 let removeButtons = Array.from(document.getElementsByClassName("remove-btn"));
@@ -113,6 +119,12 @@ save.addEventListener("click", () => {
     socialLinks = Array.from(document.getElementsByClassName("social-link"));
     const linkResults = socialLinks?.map((element) => element.outerHTML);
     localStorage.setItem("linkResults", linkResults.join(" "));
+
+    savedSection.style.display = "flex";
+
+    setTimeout(() => {
+      savedSection.style.display = "none";
+    }, 2000);
   }
 });
 

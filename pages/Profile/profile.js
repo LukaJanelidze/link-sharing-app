@@ -17,6 +17,8 @@ const backgroundSvg = document.querySelector(".background-svg");
 const svgSizeLabel = document.querySelector(".svg-size-label");
 const overlay = document.querySelector(".overlay");
 const phone = document.querySelector(".link-results");
+const savedSection = document.querySelector(".saved-section");
+const userInfo = document.querySelector(".user-info");
 
 const linkResults = localStorage.getItem("linkResults");
 if (linkResults) {
@@ -27,25 +29,27 @@ const storedImage = localStorage.getItem("profileImg");
 if (storedImage) {
   profileImage.setAttribute("src", storedImage);
   profileImage.classList.add("img-appear");
+  var temporaryImage = storedImage;
 }
 
 if (storedFirstName) {
   firstName.innerText = storedFirstName;
   firstNameInput.value = storedFirstName;
+  userInfo.classList.add("user-info-active");
 }
 
 if (storedLastName) {
   lastName.innerText = storedLastName;
   lastNameInput.value = storedLastName;
+  userInfo.classList.add("user-info-active");
 }
 
 if (storedUserEmail) {
   userEmail.innerText = storedUserEmail;
   emailAddressInput.value = storedUserEmail;
+  userInfo.classList.add("user-info-active");
 }
 // ----------------------------------------
-
-let temporaryImage;
 
 imageInput.addEventListener("input", (event) => {
   const file = event.target.files[0];
@@ -86,6 +90,12 @@ btnSave.addEventListener("click", (event) => {
     localStorage.setItem("firstName", firstNameInput.value);
     localStorage.setItem("lastName", lastNameInput.value);
     localStorage.setItem("userEmail", emailAddressInput.value);
+
+    savedSection.style.display = "flex";
+
+    setTimeout(() => {
+      savedSection.style.display = "none";
+    }, 2000);
   }
 });
 
@@ -93,12 +103,27 @@ btnSave.addEventListener("click", (event) => {
 
 firstNameInput.addEventListener("input", (event) => {
   firstName.innerText = event.target.value;
+  if (firstNameInput.value || lastNameInput.value || emailAddressInput.value) {
+    userInfo.classList.add("user-info-active");
+  } else {
+    userInfo.classList.remove("user-info-active");
+  }
 });
 
 lastNameInput.addEventListener("input", (event) => {
   lastName.innerText = event.target.value;
+  if (firstNameInput.value || lastNameInput.value || emailAddressInput.value) {
+    userInfo.classList.add("user-info-active");
+  } else {
+    userInfo.classList.remove("user-info-active");
+  }
 });
 
 emailAddressInput.addEventListener("input", (event) => {
   userEmail.innerText = event.target.value;
+  if (firstNameInput.value || lastNameInput.value || emailAddressInput.value) {
+    userInfo.classList.add("user-info-active");
+  } else {
+    userInfo.classList.remove("user-info-active");
+  }
 });
