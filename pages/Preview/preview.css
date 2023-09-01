@@ -145,7 +145,7 @@ main {
 .name-email {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 23px;
   align-items: center;
 }
 
