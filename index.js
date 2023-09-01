@@ -43,9 +43,11 @@ createButton.addEventListener("click", () => {
 emailInput.addEventListener("input", () => {
   emailInput.style.border = "";
   loginValid.innerText = "";
+  emailText.style.color = "var(--dark-grey, #333)";
 });
 
 passwordInput.addEventListener("input", () => {
   passwordInput.style.border = "";
   passwordValidation.innerText = "";
+  passwordText.style.color = "var(--dark-grey, #333)";
 });
