@@ -19,6 +19,9 @@ const overlay = document.querySelector(".overlay");
 const phone = document.querySelector(".link-results");
 const savedSection = document.querySelector(".saved-section");
 const userInfo = document.querySelector(".user-info");
+const uploadImageText = document.querySelector(".upload");
+const changeImageText = document.querySelector(".change");
+const svgElement = document.querySelector('svg');
 
 const linkResults = localStorage.getItem("linkResults");
 if (linkResults) {
@@ -62,6 +65,9 @@ imageInput.addEventListener("input", (event) => {
     backgroundSvg.style.display = "block";
     temporaryImage = reader.result;
   };
+  uploadImageText.style.display = "none";
+  changeImageText.style.display = "block";
+  svgElement.querySelector('path').setAttribute('fill', 'white');
   reader.readAsDataURL(file);
 });
 

@@ -202,6 +202,7 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  filter: brightness(50%);
   width: 193px;
   height: 193px;
   border-radius: 12px;
@@ -215,8 +216,22 @@ section {
 }
 
 .upload {
-  font-size: 14px;
-  color: var(--purple, #633cff);
+  color: var(--Purple, #633CFF);
+  font-family: Instrument Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.change {
+  color: var(--White, #FFF);
+  font-family: Instrument Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  display: none;
 }
 
 .svg-text {
