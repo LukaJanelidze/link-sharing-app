@@ -1,3 +1,5 @@
+localStorage.removeItem("token");
+
 const createButton = document.querySelector(".create-btn");
 const emailInput = document.querySelector(".email-input");
 const emailError = document.getElementById("email-error");

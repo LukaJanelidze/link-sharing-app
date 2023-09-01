@@ -1,5 +1,10 @@
 //top level code
 
+const storedToken = localStorage.getItem("token");
+if (!storedToken) {
+  window.location.href = "../../index.html";
+}
+
 const addLinkButton = document.querySelector(".btn");
 const empty = document.querySelector(".empty");
 const phone = document.querySelector(".link-results");
@@ -253,7 +258,7 @@ function linkChild(num) {
   
   </select>
  <div class="input-text">
-  <label for="link">link<label>
+  <label for="link">Link<label>
     <img class="links-header" src="../../assets/images/icon-links-header.svg" alt="" />
     
  <input class="link-input"  type="text">

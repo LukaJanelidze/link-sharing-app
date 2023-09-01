@@ -1,3 +1,8 @@
+const storedToken = localStorage.getItem("token");
+if (!storedToken) {
+  window.location.href = "../../index.html";
+}
+
 const storedProfileImg = localStorage.getItem("profileImg");
 const storedFirstName = localStorage.getItem("firstName");
 const storedlastName = localStorage.getItem("lastName");
