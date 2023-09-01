@@ -6,6 +6,15 @@ const phone = document.querySelector(".link-results");
 const links = document.querySelector(".links");
 const save = document.querySelector(".btnSave");
 
+const storedFirstName = localStorage.getItem("firstName");
+const storedLastName = localStorage.getItem("lastName");
+const storedUserEmail = localStorage.getItem("userEmail");
+
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const userEmail = document.getElementById("user-email");
+const profileImage = document.querySelector(".profile-img");
+
 const storedLinks = localStorage.getItem("links");
 if (storedLinks) {
   links?.insertAdjacentHTML("beforeend", storedLinks);
@@ -14,6 +23,24 @@ if (storedLinks) {
 const linkResults = localStorage.getItem("linkResults");
 if (linkResults) {
   phone?.insertAdjacentHTML("beforeend", linkResults);
+}
+
+const storedImage = localStorage.getItem("profileImg");
+if (storedImage) {
+  profileImage.setAttribute("src", storedImage);
+  profileImage.style.display = "block";
+}
+
+if (storedFirstName) {
+  firstName.innerText = storedFirstName;
+}
+
+if (storedLastName) {
+  lastName.innerText = storedLastName;
+}
+
+if (storedUserEmail) {
+  userEmail.innerText = storedUserEmail;
 }
 
 let removeButtons = Array.from(document.getElementsByClassName("remove-btn"));
@@ -41,7 +68,7 @@ addEventListenerToRemoveButton();
 
 document.addEventListener("click", () => {
   select = [...document.querySelectorAll("select")];
-  
+
   linkInputs = Array.from(document.querySelectorAll(".link-input"));
   socialLinks = Array.from(document.getElementsByClassName("social-link"));
   removeButtons = Array.from(document.getElementsByClassName("remove-btn"));

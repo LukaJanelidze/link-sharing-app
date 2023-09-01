@@ -138,57 +138,6 @@ section {
   position: relative;
 }
 
-.profile-img {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  display: none;
-}
-
-.user-info {
-  position: absolute;
-  top: 37.8%;
-  left: 25.5%;
-  transform: translateY(-50%);
-  margin: 0;
-  text-align: center;
-  overflow: hidden;
-  width: 100%;
-  max-width: 285px;
-  word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1px;
-}
-
-#first-name,
-#last-name {
-  color: var(--Dark-Grey, #333);
-  font-family: "Instrument Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-}
-
-.full-name {
-  display: flex;
-  gap: 5px;
-  height: 27px;
-}
-
-#user-email {
-  color: var(--Grey, #737373);
-  font-size: 14px;
-  font-weight: 400;
-  height: 21px;
-  font-family: "Instrument Sans", sans-serif;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -519,6 +468,7 @@ h3 {
   h3 {
     font-size: 32px;
   }
+
 }
 @media (min-width: 1440px) {
   .img-phone-mockup {
@@ -540,7 +490,7 @@ h3 {
     margin-top: 16px;
   }
   .phone-mockup {
-    padding: 140px;
+    padding: 125px;
     border-radius: 12px;
     background-color: #fff;
   }
@@ -559,4 +509,5 @@ h3 {
   .btn-btn {
     padding: 10px 40px 30px 16px;
   }
+
 }

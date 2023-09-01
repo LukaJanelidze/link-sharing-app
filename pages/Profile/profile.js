@@ -16,6 +16,12 @@ const profileImage = document.querySelector(".profile-img");
 const backgroundSvg = document.querySelector(".background-svg");
 const svgSizeLabel = document.querySelector(".svg-size-label");
 const overlay = document.querySelector(".overlay");
+const phone = document.querySelector(".link-results");
+
+const linkResults = localStorage.getItem("linkResults");
+if (linkResults) {
+  phone?.insertAdjacentHTML("beforeend", linkResults);
+}
 
 const storedImage = localStorage.getItem("profileImg");
 if (storedImage) {
