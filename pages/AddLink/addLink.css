@@ -9,7 +9,6 @@
 }
 
 .links {
-  height: 555px;
   overflow-y: auto;
 }
 .links::-webkit-scrollbar {
@@ -509,6 +508,7 @@ hr {
   }
   .box {
     width: 808px;
+    height: 882px;
   }
   .btnSave:hover {
     box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
